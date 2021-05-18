@@ -11,7 +11,7 @@ public class RoomRotation1 : MonoBehaviour
     private void Start()
     {
         lastPos = cam.position;
-
+        enabled = false;
     }
 
     public void Update()
@@ -19,21 +19,19 @@ public class RoomRotation1 : MonoBehaviour
 
         cam.transform.position = new Vector3(cam.transform.position.x, 0, cam.transform.position.z);
 
-
         Vector3 startPos = cam.position;
-        transform.position += startPos - cam.position;
-        lastPos = cam.position;
 
-
-    }
-
-
-    void OnTriggerStay()
-    {
         var d = Vector3.Distance(cam.position, lastPos);
 
-        room.transform.rotation *= Quaternion.AngleAxis(d * mltp, Vector3.up);
+        transform.rotation *= Quaternion.AngleAxis(d * mltp, Vector3.up);
+
+        transform.position += startPos - cam.position;
+
+        lastPos = cam.position;
     }
+
+
+  
 
 
 }

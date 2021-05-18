@@ -36,6 +36,28 @@ public class Music1 : MonoBehaviour
             EE.Stop();
         }
 
+
+
+        /* public AudioClip AA, BB, CC, DD;
+      public float Volume;
+      AudioSource audio;
+      public bool alreadyPlayer = false;
+
+
+      private void Start()
+      {
+          audio.GetComponent<AudioSource>();
+      }
+
+
+      void OnTriggerEnter()
+      {
+          if (!alreadyPlayer)
+          {
+              audio.PlayOneShot(BB, Volume);
+              alreadyPlayer = true;
+          }*/
+
     }
 
 }
