@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class TriggerRoomR : MonoBehaviour
 {
-    
+    public RoomRotation1 Rotate;
+
     void OnTriggerEnter(Collider other)
     {
-        RoomRotation1 a = other.GetComponent<RoomRotation1>();
-        if (a != null)
+       if (other.gameObject.tag == "Duszek")
         {
-            a.enabled = true;
+            Rotate.enabled = true;
         }
     }
 
