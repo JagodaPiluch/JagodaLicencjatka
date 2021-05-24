@@ -19,7 +19,7 @@ public class RoomRotation1 : MonoBehaviour {
 
 		var d = Vector3.Distance(cam.position, lastPos);
 
-		transform.rotation *= Quaternion.AngleAxis(d * mltp, Vector3.up);
+		transform.rotation *= Quaternion.AngleAxis(d / mltp * Mathf.Rad2Deg, Vector3.up);
 
 		transform.position += startPos - cam.position;
 
